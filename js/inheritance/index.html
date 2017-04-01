@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>inheritance</title>
+</head>
+<body>
+<code>
+<pre></pre>
+</code>
+
+
+<script id="code">
+	//prototype inheritance
+	function Persion() {
+		this.name;
+		this.hello = function() {
+			alert("Hello. My name is "+ this.name);
+			this.say = function() {
+				alert('hey');
+			}
+		}
+	}
+	function Student(){};
+
+	Student.prototype = new Persion();
+	Student.prototype.constructor = Student;
+	var tom = new Student();
+	tom.name = 'Tom';
+	tom.hello();
+	
+	//call/apply inheritance
+	function Animal() {
+		this.species = 'Animal';
+	}
+
+	function Cat(name,color) {
+		Animal.apply(this,arguments);
+		this.name = name;
+		this.color = color;
+	}
+	var mimi = new Cat('Mimi','yellow');
+	alert(mimi.species);
+
+</script>
+
+<script>
+	var code = document.getElementById('code');
+	document.getElementsByTagName('pre')[0].innerHTML = code.innerHTML;
+</script>
+</body>
+</html>
