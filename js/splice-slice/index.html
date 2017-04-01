@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>splice vs slice</title>
+</head>
+<body>
+<pre></pre>
+</body>
+<script id="code">
+var arr = ['a','b','c','d','e','f','g'];
+var arrSlice = arr.slice(1,5); // ['b','c','d','e']  arr not mutated
+var arrSplice = arr.splice(1,5); // ['b','c','d','e']  arr:['a','g']
+</script>
+<script>
+	var code = document.getElementById('code');
+	document.getElementsByTagName('pre')[0].innerHTML = code.innerHTML;
+</script>
+
+</html>
