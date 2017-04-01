@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>closure</title>
+</head>
+<body>
+<pre></pre>
+</body>
+<script id="code">
+var name = "The Window";
+　　var object = {
+　　　　name : "My Object",
+　　　　getNameFunc : function(){
+　　　　　　return function(){
+　　　　　　　　return this.name;
+　　　　　　};
+　　　　}
+　　};
+　　alert(object.getNameFunc()());
+
+</script>
+<script>
+	var code = document.getElementById('code');
+	document.getElementsByTagName('pre')[0].innerHTML = code.innerHTML;
+</script>
+
+</html>
