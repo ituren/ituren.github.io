@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>insert before with vanilla js</title>
+</head>
+<body>
+<main>
+	<!-- beforebegin -->
+	<div id="a">
+	<!-- afterbegin -->
+		a
+	<!-- beforeend -->
+	</div>
+	<!-- afterend -->
+	module
+	<div id="b">b</div>
+	<div id="c">c</div>
+</main>
+<script>
+var domStr = '<span>1</span><span>2</span>';
+
+var a = document.getElementById('a');
+a.insertAdjacentHTML('afterend',domStr);
+
+</script>
+</body>
+</html>
