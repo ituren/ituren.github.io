@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>event bubbling</title>
+</head>
+<body>
+<div id="main">
+	<div id="parent">
+		<div id="child">child</div>
+		<div id="other">other</div>
+	</div>
+</div>
+</body>
+<script>
+var childEl = document.querySelector('#child')
+childEl.addEventListener('click',function(event) {
+	alert('child clicked')
+});
+
+var parentEl = document.querySelector('#parent')
+parentEl.addEventListener('click',function(event) {
+	alert('parent clicked')
+},true); // useCapture
+
+
+</script>
+</html>
