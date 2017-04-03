@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>inheritance Object.create(X.prototype) vs new X()</title>
+</head>
+<body>
+
+</body>
+<script>
+function Job() {
+	this.pays = true;
+}
+Job.prototype.print = function() {
+	console.log(this.pays?'Hire me!':'Fuck off!!');
+}
+function CodeFarmer(title){
+	this.title = title;
+}
+CodeFarmer.prototype = Object.create(Job.prototype); // pays = undefined
+// CodeFarmer.prototype = new Job();// pays = true
+CodeFarmer.prototype.constructor = CodeFarmer;
+
+var me = new CodeFarmer('Junior programmer');
+me.print();
+</script>
+</html>
