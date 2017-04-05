@@ -22,6 +22,9 @@ parentEl.addEventListener('click',function(event) {
 	alert('parent clicked')
 },true); // useCapture
 
-
+var mainEl = document.querySelector('#main')
+mainEl.addEventListener('click',function(event) {
+	alert('main clicked')
+});
 </script>
 </html>
