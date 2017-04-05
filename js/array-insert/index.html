@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>array insert</title>
+</head>
+<body>
+
+</body>
+<script>
+var ary = [1,2,3,4,5];
+ary.splice(2,0,[6,7]);
+console.log(ary);
+ary = [1,2,3,4,5];
+Array.prototype.splice.apply(ary,[2,0].concat([6,7]));
+console.log(ary);
+</script>
+</html>
