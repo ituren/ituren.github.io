@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>string sort by ascii</title>
+</head>
+<body>
+
+<script>
+var str = '0987654asdfghjktrewwww';
+function ascSort(string) {
+	var strAry = string.split('');
+	return strAry.sort(function(a,b) {
+		if (a.charCodeAt() < b.charCodeAt()) {
+			return -1;
+		}
+		if (a.charCodeAt() > b.charCodeAt()) {
+			return 1;
+		}
+		return 0;
+
+	})
+	
+}
+console.log(ascSort(str));
+
+</script>
+</body>
+</html>
