@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>get radio group value</title>
+</head>
+<body>
+
+<form id="form_id" name="form_id">
+	<input type="radio" name="month" value="1">
+	<input type="radio" name="month" value="2">
+	<input type="radio" name="month" value="3">
+	<input type="radio" name="month" checked value="4">
+	<input type="radio" name="month" value="5">
+</form>
+</body>
+<script>
+var months = document.getElementsByName('month');
+for (var i = 0; i < months.length; i++) {
+	var month = months[i];
+	if (month.checked) {
+		alert(month.value);
+	}
+}
+</script>
+</html>
